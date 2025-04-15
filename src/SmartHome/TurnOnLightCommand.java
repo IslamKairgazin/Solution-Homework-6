@@ -1,4 +1,17 @@
-package SmartHome;
+public class TurnOnLightCommand implements Command {
+    private Light light;
 
-public class TurnOnLightCommand {
+    public TurnOnLightCommand(Light light) {
+        this.light = light;
+    }
+
+    @Override
+    public void execute() {
+        light.turnOn();
+    }
+
+    @Override
+    public void undo() {
+        light.turnOff();
+    }
 }
