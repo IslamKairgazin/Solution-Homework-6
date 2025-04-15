@@ -1,4 +1,3 @@
-// SupportHandler.java
 public abstract class SupportHandler {
     protected SupportHandler nextHandler;
 
